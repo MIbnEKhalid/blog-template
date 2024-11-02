@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog-template-gray.vercel.app/sitemap-index.xml
+Sitemap: https://startling-torrone-3b011b.netlify.app/sitemap-index.xml
