@@ -10,7 +10,8 @@ collections:
     label: "Blog"
     folder: "src/content/blog"
     create: true
-    format: "mdx"
+    extension: mdx
+    format: frontmatter
     fields:
       - { label: "Cover Image", name: "heroImage", widget: "image", required: true }
       - { label: "Category", name: "category", widget: "select", options: [ /* Add your CATEGORIES here */ ], required: true }
