@@ -42,6 +42,10 @@
 
   - schema for posts
 
+- `/src/components/Header.astro`
+
+  - schema for posts
+
 - `/public/robot.txt`
 
   - edit link to your website sitemap
