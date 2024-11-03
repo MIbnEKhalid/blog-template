@@ -1,6 +1,6 @@
 ---
 heroImage: bg.jpg
-category: /* Add your CATEGORIES here */
+category: 'Category 3'
 description: Testing
 pubDate: 2024-11-03T12:46:00.000Z
 draft: false
