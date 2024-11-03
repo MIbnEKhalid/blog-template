@@ -2,25 +2,70 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/img"
-public_folder: "/img"
+  media_folder: "src/assets/images"
+  public_folder: ""
+
+  publish_mode: editorial_workflow
 
 collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/post
-    label: "Posts" # Used in the UI
-    folder: "_posts"
-    media_folder: "img" # Save images in the post's own folder instead of the static folder
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - name: "post"
+    label: "Blog Post"
+    folder: "src/content/blog"
+    format: "mdx"
+    create: true
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Categories", name: "categories", widget: "list", default: ["jekyll", "update"], field: { label: "Category", name: "category", widget: "string" }}
-      - { label: "Body", name: "body", widget: "markdown" }
-#    fields: # The fields for each document, usually in front matter
-#      - { label: "Title", name: "title", widget: "string" }
-#      - { label: "Publish Date", name: "date", widget: "datetime" }
-#      - { label: "Featured Image", name: "image", widget: "image" }
-#      - { label: "Tags", name: "tags", widget: "list", summary: "{{fields.tag}}", field: { label: "Tag", name: "tag", widget: "string" }} # https://github.com/decaporg/decap-cms/issues/4646 
-#      - { label: "Body", name: "body", widget: "markdown", hint: "Make sure to name added image as thumbnail" }
+      - label: "Cover Image"
+        name: "heroImage"
+        widget: "image"
+        required: true
+        hint: "The image used for the cover of the post"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: true
+        hint: "Select a category for this post"
+        options:
+          - "CATEGORY1" # Replace with actual categories
+          - "CATEGORY2" # Replace with actual categories
+
+      - label: "Description"
+        name: "description"
+        widget: "string"
+        required: true
+        hint: "A short description of the post"
+
+      - label: "Publication Date"
+        name: "pubDate"
+        widget: "datetime"
+        required: true
+
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        hint: "If this is checked, the post will not be published"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: true
+        hint: "Tags for this post"
+        field:
+          widget: "string"
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+        isTitle: true
+
+      - label: "Body"
+        name: "SButton"
+        widget: "markdown"
+        required: true
+        hint: "Main content of the post"
+        fields:
+          - label: "SButton"
+            name: "children"
+            widget: "markdown"
+            required: true
