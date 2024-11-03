@@ -11,6 +11,7 @@ collections:
   - name: "post"
     label: "Blog Post"
     folder: "src/content/blog"
+    media_folder: "src/assets/images"
     format: "mdx"
     create: true
     fields:
