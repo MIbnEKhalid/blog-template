@@ -1,5 +1,5 @@
 ---
-heroImage: bg.jpg
+heroImage: ../../assets/images/banner.jpg
 category: 'Category 3'
 description: Testing
 pubDate: 2024-11-03T12:46:00.000Z
