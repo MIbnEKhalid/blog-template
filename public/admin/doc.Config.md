@@ -17,3 +17,38 @@
 - - Continue with more `#` for deeper levels of headings
 -
 - These headings will be displayed as a table of contents on the left side of the page.
+
+- `package.json`
+
+  - change github repo link to your repo link
+
+- `astro.config.mjs`
+
+  - change site link to your website link
+
+- `/src/data/categories.ts`
+
+  - edit/add your categories
+
+- `/src/data/disqus.config.ts`
+
+  - enable/disable disqus comments
+
+- `/src/data/site.config.ts`
+
+  - enable/disable disqus comments
+
+- `/src/content/config.ts`
+
+  - schema for posts
+
+- `/public/robot.txt`
+
+  - edit link to your website sitemap
+
+- `/public/favicon.svg`
+
+  - change your website home page logo
+
+- `/public/admin/config.yml`
+  - schema for creating posts using netlify CMS
